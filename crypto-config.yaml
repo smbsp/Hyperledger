@@ -84,8 +84,8 @@ PeerOrgs:
   #  # ---------------------------------------------------------------------------
   # Org3: See "Org1" for full specification
   # ---------------------------------------------------------------------------
-  - Name: Transporter
-    Domain: transporter.vt.com
+  - Name: Supplier
+    Domain: supplier.vt.com
     EnableNodeOUs: true
     Template:
       Count: 1
@@ -94,8 +94,8 @@ PeerOrgs:
   # ---------------------------------------------------------------------------
   # Org4: See "Org1" for full specification
   # ---------------------------------------------------------------------------
-  - Name: Insurer
-    Domain: insurer.vt.com
+  - Name: Dealer
+    Domain: dealer.vt.com
     EnableNodeOUs: true
     Template:
       Count: 1
@@ -104,11 +104,20 @@ PeerOrgs:
   # ---------------------------------------------------------------------------
   # Org2: See "Org1" for full specification
   # ---------------------------------------------------------------------------
-  - Name: Warehouse
-    Domain: warehouse.vt.com
+  - Name: Regulator
+    Domain: regulator.vt.com
     EnableNodeOUs: true
     Template:
       Count: 1
     Users:
       Count: 1
-
+  # ---------------------------------------------------------------------------
+  # Org2: See "Org1" for full specification
+  # ---------------------------------------------------------------------------
+  - Name: Scrapper
+    Domain: scrapper.vt.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+    Users:
+      Count: 1

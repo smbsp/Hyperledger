@@ -28,9 +28,10 @@ Profiles:
                 Organizations:
                     - *Owner
                     - *Manufacturer
-                    - *Transporter
-                    - *Insurer
-                    - *Warehouse
+                    - *Supplier
+                    - *Dealer
+                    - *Regulator
+                    - *Scrapper
     SupplyChainVehicleChannel:
         Consortium: SampleConsortium
         Application:
@@ -38,9 +39,10 @@ Profiles:
             Organizations:
                     - *Owner
                     - *Manufacturer
-                    - *Transporter
-                    - *Insurer
-                    - *Warehouse
+                    - *Supplier
+                    - *Dealer
+                    - *Regulator
+                    - *Scrapper
             Capabilities:
                 <<: *ApplicationCapabilities
 
@@ -101,58 +103,76 @@ Organizations:
             - Host: peer0.manufacturer.vt.com
               Port: 7051
 
-    - &Transporter
+    - &Supplier
         # DefaultOrg defines the organization which is used in the sampleconfig
         # of the fabric.git development environment
-        Name: TransporterMSP
+        Name: SupplierMSP
 
         # ID to load the MSP definition as
-        ID: TransporterMSP
+        ID: SupplierMSP
 
-        MSPDir: crypto-config/peerOrganizations/transporter.vt.com/msp
+        MSPDir: crypto-config/peerOrganizations/supplier.vt.com/msp
 
         AnchorPeers:
             # AnchorPeers defines the location of peers which can be used
             # for cross org gossip communication.  Note, this value is only
             # encoded in the genesis block in the Application section context
-            - Host: peer0.transporter.vt.com
+            - Host: peer0.supplier.vt.com
               Port: 7051
 
 
-    - &Insurer
+    - &Dealer
         # DefaultOrg defines the organization which is used in the sampleconfig
         # of the fabric.git development environment
-        Name: InsurerMSP
+        Name: DealerMSP
 
         # ID to load the MSP definition as
-        ID: InsurerMSP
+        ID: DealerMSP
 
-        MSPDir: crypto-config/peerOrganizations/insurer.vt.com/msp
+        MSPDir: crypto-config/peerOrganizations/dealer.vt.com/msp
 
         AnchorPeers:
             # AnchorPeers defines the location of peers which can be used
             # for cross org gossip communication.  Note, this value is only
             # encoded in the genesis block in the Application section context
-            - Host: peer0.insurer.vt.com
+            - Host: peer0.dealer.vt.com
               Port: 7051
 
 
-    - &Warehouse
+    - &Regulator
         # DefaultOrg defines the organization which is used in the sampleconfig
         # of the fabric.git development environment
-        Name: WarehouseMSP
+        Name: RegulatorMSP
 
         # ID to load the MSP definition as
-        ID: WarehouseMSP
+        ID: RegulatorMSP
 
-        MSPDir: crypto-config/peerOrganizations/warehouse.vt.com/msp
+        MSPDir: crypto-config/peerOrganizations/regulator.vt.com/msp
 
         AnchorPeers:
             # AnchorPeers defines the location of peers which can be used
             # for cross org gossip communication.  Note, this value is only
             # encoded in the genesis block in the Application section context
-            - Host: peer0.warehouse.vt.com
+            - Host: peer0.regulator.vt.com
               Port: 7051
+
+    - &Scrapper
+        # DefaultOrg defines the organization which is used in the sampleconfig
+        # of the fabric.git development environment
+        Name: ScrapperMSP
+
+        # ID to load the MSP definition as
+        ID: ScrapperMSP
+
+        MSPDir: crypto-config/peerOrganizations/scrapper.vt.com/msp
+
+        AnchorPeers:
+            # AnchorPeers defines the location of peers which can be used
+            # for cross org gossip communication.  Note, this value is only
+            # encoded in the genesis block in the Application section context
+            - Host: peer0.scrapper.vt.com
+              Port: 7051
+
 
 
 ################################################################################
@@ -170,7 +190,7 @@ Orderer: &OrdererDefaults
     OrdererType: solo
 
     Addresses:
-        - orderer.example.com:7050
+        - orderer.vt.com:7050
 
     # Batch Timeout: The amount of time to wait before creating a batch
     BatchTimeout: 2s
