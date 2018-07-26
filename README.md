@@ -1,7 +1,25 @@
-## Build Your First Network (BYFN)
+# Vehicle Tracking on Blockchain
 
-The directions for using this are documented in the Hyperledger Fabric
-["Build Your First Network"](http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html) tutorial.
+Vehicle Tracking is self service platform to manage life cycle of Vehicle from Manufacturing to Scarpping.  Platform is developed on blockchain platform to automate, optimize processes, reduce fraud and bring trust and transparency into the system.  
 
-*NOTE:* After navigating to the documentation, choose the documentation version that matches your version of Fabric
+## Start and setup blockchain network
 
+1. ./vtnetwork.sh
+2. ./setupnetwork.sh
+
+## Build and run blockchain Rest API Server
+
+1.
+2.
+3.
+
+## Technology
+
+1. Hyperledger Fabric blockchain platform.
+2. NodeJS
+3. Go-lang for samrt contract
+
+## Contributor
+
+1.
+2.
