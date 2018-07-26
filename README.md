@@ -4,8 +4,8 @@ Vehicle Tracking is self service platform to manage life cycle of Vehicle from M
 
 ## Start and setup blockchain network
 
-1. ./vtnetwork.sh
-2. ./setupnetwork.sh
+1. ./start-network.sh
+2. ./setup-network.sh
 
 ## Build and run blockchain Rest API Server
 
