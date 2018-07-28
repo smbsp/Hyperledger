@@ -64,3 +64,6 @@ docker exec -e "CORE_PEER_LOCALMSPID=RegulatorMSP" -e "CORE_PEER_MSPCONFIGPATH=/
 
 # Instantiate and initialize chaincode to peer0.scrapper.vt.com
 docker exec -e "CORE_PEER_LOCALMSPID=ScrapperMSP" -e "CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/supply/hyperledger/fabric/peer/crypto/peerOrganizations/scrapper.vt.com/users/Admin@scrapper.vt.com/msp" -e "CORE_PEER_ADDRESS=peer0.scrapper.vt.com:7051" -e "CORE_PEER_ID=cli" cli peer chaincode instantiate -o orderer.vt.com:7050 -C vt-channel -n vt-network -l golang -v 1.0 -c '{"Args":[""]}' -P "OR ('ManufacturerMSP.member','OwnerMSP.member','SupplierMSP.member','DealerMSP.member','RegulatorMSP.member','ScrapperMSP.member')"
+
+
+docker exec -e "CORE_PEER_LOCALMSPID=ManufacturerMSP" -e "CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/supply/hyperledger/fabric/peer/crypto/peerOrganizations/manufacturer.vt.com/users/Admin@manufacturer.vt.com/msp" cli peer chaincode invoke -o orderer.vt.com:7050 -C vt-channel -n vt-network -c '{"function":"initLedger","Args":[""]}'

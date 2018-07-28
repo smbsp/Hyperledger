@@ -17,8 +17,8 @@ var os = require('os');
 var fabric_client = new Fabric_Client();
 
 // setup the fabric network
-var channel = fabric_client.newChannel('mychannel');
-var peer = fabric_client.newPeer('grpc://localhost:7051');
+var channel = fabric_client.newChannel('vt-channel');
+var peer = fabric_client.newPeer('grpc://localhost:8051');
 channel.addPeer(peer);
 
 //
@@ -40,7 +40,7 @@ Fabric_Client.newDefaultKeyValueStore({ path: store_path
 	fabric_client.setCryptoSuite(crypto_suite);
 
 	// get the enrolled user from persistence, this user will sign all requests
-	return fabric_client.getUserContext('user1', true);
+	return fabric_client.getUserContext('manufacturerUser1', true);
 }).then((user_from_store) => {
 	if (user_from_store && user_from_store.isEnrolled()) {
 		console.log('Successfully loaded user1 from persistence');
@@ -53,7 +53,7 @@ Fabric_Client.newDefaultKeyValueStore({ path: store_path
 	// queryAllCars chaincode function - requires no arguments , ex: args: [''],
 	const request = {
 		//targets : --- letting this default to the peers assigned to the channel
-		chaincodeId: 'fabcar',
+		chaincodeId: 'vt-network',
 		fcn: 'queryCar',
 		args: ['CAR4']
 	};
