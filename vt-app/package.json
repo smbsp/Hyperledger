@@ -1,0 +1,18 @@
+{
+  "name": "vt-app",
+  "version": "1.0.0",
+  "description": "Vehicle Tracking is self service platform to manage life cycle of Vehicle from Manufacturing to Scarpping.  Platform is developed on blockchain platform to automate, optimize processes, reduce fraud and bring trust and transparency into the system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "fabric-ca-client": "~1.1.0",
+    "fabric-client": "~1.1.0",
+    "grpc": "^1.6.0"
+  }
+}
