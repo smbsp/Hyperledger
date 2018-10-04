@@ -9,6 +9,6 @@ Vehicle Tracking is self service platform to manage life cycle of vehicle from M
 
 ## Technology
 
-1. Hyperledger Fabric blockchain platform.
+1. Hyperledger Fabric 1.0
 2. Javascript
 3. Go-lang for smart contract
