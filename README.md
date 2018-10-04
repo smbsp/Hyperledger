@@ -1,25 +1,14 @@
 # Vehicle Tracking on Blockchain
 
-Vehicle Tracking is self service platform to manage life cycle of Vehicle from Manufacturing to Scarpping.  Platform is developed on blockchain platform to automate, optimize processes, reduce fraud and bring trust and transparency into the system.  
+Vehicle Tracking is self service platform to manage life cycle of vehicle from Manufacturing to Scrapping. It is developed on Hyperledger to automate, optimize processes, reduce fraud and bring trust and transparency into the system.  
 
 ## Start and setup blockchain network
 
 1. ./start-network.sh
 2. ./setup-network.sh
 
-## Build and run blockchain Rest API Server
-
-1.
-2.
-3.
-
 ## Technology
 
 1. Hyperledger Fabric blockchain platform.
-2. NodeJS
-3. Go-lang for samrt contract
-
-## Contributor
-
-1.
-2.
+2. Javascript
+3. Go-lang for smart contract
